@@ -96,8 +96,8 @@ export default {
         return;
       }
 
-      // this.updateSong(this.index, values);
-      // this.updateUnsavedFlag(false);
+      this.updateSong(this.index, values);
+      this.updateUnsavedFlag(false);
 
       this.in_submission = false;
       this.alert_variant = "bg-green-500";
