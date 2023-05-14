@@ -16,6 +16,7 @@
     "@vee-validate/rules": "^4.8.4",
     "firebase": "^8.10.1",
     "pinia": "^2.0.32",
+    "pug": "^3.0.2",
     "vee-validate": "^4.8.4",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
