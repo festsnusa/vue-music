@@ -1,6 +1,8 @@
 <template lang="pug">
 AppHeader
-RouterView
+RouterView(v-slot="{Component}")
+  transition(name="fade" mode="out-in")
+    component(:is="Component")
 AppPlayer
 AppAuth
 </template>
@@ -33,3 +35,14 @@ export default {
 }
 </script>
 
+<style lang="sass">
+.fade-enter-from
+  opacity: 0
+
+.fade-enter-active
+  transition: all 0.5s linear
+
+.fade-leave-to
+  transition: all 0.5s linear
+  opacity: 0
+</style>
