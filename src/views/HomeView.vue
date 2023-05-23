@@ -13,9 +13,9 @@ main
 
   section.container.mx-auto
     .bg-white.rounded.border.border-gray-200.relative.flex.flex-col
-      .px-6.pt-6.pb-5.font-bold.border-b.border-gray-200
+      .px-6.pt-6.pb-5.font-bold.border-b.border-gray-200(v-icon="'headphones-alt'")
         span.card-title Songs
-        i.fa.fa-headphones-alt.float-right.text-green-400.text-xl
+        //- i.fa.fa-headphones-alt.float-right.text-green-400.text-xl
       ol#playlist
         SongItem(v-for="song in songs" :key="song.docID" :song="song")
 </template>
