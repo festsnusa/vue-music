@@ -68,18 +68,5 @@ export default {
       next(leave);
     }
   },
-  // beforeRouteLeave(to, from, next) {
-  //   this.$refs.upload.cancelUploads();
-  //   next();
-  // },
-  // beforeRouteEnter(to, from, next) {
-  //   const store = useUserStore();
-
-  //   if (store.userLoggedIn) {
-  //     next();
-  //   } else {
-  //     next({ name: "home" });
-  //   }
-  // },
 }
 </script>
