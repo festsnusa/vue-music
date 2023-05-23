@@ -7,8 +7,8 @@ div(class="fixed bottom-0 left-0 bg-white px-4 py-2 w-full")
     span.song-artist Artist
   div(class="flex flex-nowrap gap-4 items-center")
     // Play/Pause Button
-    button(type="button")
-      i.fa.fa-play.text-gray-500.text-xl
+    button(type="button" @click.prevent="toggleAudio")
+      i.fa.text-gray-500.text-xl(:class="{'fa-play': !playing, 'fa-pause': playing}")
     // Current Position
     .player-currenttime 00:00
     // Scrub Container
@@ -23,8 +23,16 @@ div(class="fixed bottom-0 left-0 bg-white px-4 py-2 w-full")
 </template>
 
 <script>
+import { mapActions, mapState } from 'pinia'
+import usePlayerStore from "@/stores/player"
 export default {
   name: "AppPlayer",
+  methods: {
+    ...mapActions(usePlayerStore, ["toggleAudio"]),
+  },
+  computed: {
+    ...mapState(usePlayerStore, ["playing"]),
+  }
 }
 </script>
 
