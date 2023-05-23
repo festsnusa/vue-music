@@ -10,7 +10,7 @@ div(class="fixed bottom-0 left-0 bg-white px-4 py-2 w-full")
     button(type="button" @click.prevent="toggleAudio")
       i.fa.text-gray-500.text-xl(:class="{'fa-play': !playing, 'fa-pause': playing}")
     // Current Position
-    .player-currenttime 00:00
+    .player-currenttime {{ seek }}
     // Scrub Container
     div(class="w-full h-2 rounded bg-gray-200 relative cursor-pointer")
       // Player Ball
@@ -19,7 +19,7 @@ div(class="fixed bottom-0 left-0 bg-white px-4 py-2 w-full")
       // Player Progress Bar
       span(class="block h-2 rounded bg-gradient-to-r from-green-500 to-green-400" style="width: 50%")
     // Duration
-    .player-duration 03:06
+    .player-duration {{ duration }}
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
     ...mapActions(usePlayerStore, ["toggleAudio"]),
   },
   computed: {
-    ...mapState(usePlayerStore, ["playing"]),
+    ...mapState(usePlayerStore, ["playing", "duration", "seek"]),
   }
 }
 </script>
