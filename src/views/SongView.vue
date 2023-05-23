@@ -13,7 +13,7 @@ section(class="w-full mb-8 py-14 text-center text-white relative")
       .text-3xl.font-bold {{ song.modified_name }}
       div {{ song.genre }}
 // Form
-section.container.mx-auto.mt-6
+section.container.mx-auto.mt-6#comments
   div(class="bg-white rounded border border-gray-200 relative flex flex-col")
     div(class="px-6 pt-6 pb-5 font-bold border-b border-gray-200")
       // comment count
