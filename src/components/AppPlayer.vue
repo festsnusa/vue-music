@@ -12,7 +12,7 @@ div(class="fixed bottom-0 left-0 bg-white px-4 py-2 w-full")
     // Current Position
     .player-currenttime {{ seek }}
     // Scrub Container
-    div(class="w-full h-2 rounded bg-gray-200 relative cursor-pointer")
+    div(@click.prevent="updateSeek" class="w-full h-2 rounded bg-gray-200 relative cursor-pointer")
       // Player Ball
       span(class="absolute -top-2.5 -ml-2.5 text-gray-800 text-lg" :style="{left: playerProgress}")
         i.fas.fa-circle
@@ -28,7 +28,7 @@ import usePlayerStore from "@/stores/player"
 export default {
   name: "AppPlayer",
   methods: {
-    ...mapActions(usePlayerStore, ["toggleAudio"]),
+    ...mapActions(usePlayerStore, ["toggleAudio", "updateSeek"]),
   },
   computed: {
     ...mapState(usePlayerStore, [
