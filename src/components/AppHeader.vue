@@ -26,6 +26,11 @@
           </template>
 
         </ul>
+        <ul class="ml-auto">
+          <a class="px-2 text-white" href="#" @click.prevent="changeLocale">
+            {{ currentLocale }}
+          </a>
+        </ul>
       </div>
     </nav>
   </header>
@@ -39,13 +44,19 @@ import useUserStore from '@/stores/user'
 export default {
   name: "AppHeader",
   computed: {
-    ...mapStores(useModalStore, useUserStore)
+    ...mapStores(useModalStore, useUserStore),
+    currentLocale() {
+      return this.$188n.locale === "fr" ? "French" : "English"
+    }
   },
   methods: {
     toggleAuthModal() {
       this.modalStore.isOpen = !this.modalStore.isOpen
       console.log(this.modalStore.isOpen)
-    }
+    },
+    changeLocale() {
+      this.$188n.locale = this.$188n.locale === 'fr' ? 'en' : 'fr'
+    },
   }
 }
 </script>
