@@ -13,7 +13,8 @@ main
 
   section.container.mx-auto
     .bg-white.rounded.border.border-gray-200.relative.flex.flex-col
-      .px-6.pt-6.pb-5.font-bold.border-b.border-gray-200(v-icon.right.yellow="'headphones-alt'")
+      //- .px-6.pt-6.pb-5.font-bold.border-b.border-gray-200(v-icon.right.yellow="'headphones-alt'")
+      .px-6.pt-6.pb-5.font-bold.border-b.border-gray-200(v-icon-secondary="{icon: 'headphones-alt', right: true}")
         span.card-title Songs
         //- i.fa.fa-headphones-alt.float-right.text-green-400.text-xl
       ol#playlist
@@ -23,6 +24,7 @@ main
 <script>
 import { songsCollection } from '@/includes/firebase'
 import SongItem from '@/components/SongItem.vue'
+import IconSecondary from '@/directives/icon-secondary'
 
 export default {
   name: "HomeView",
@@ -35,6 +37,9 @@ export default {
   },
   components: {
     SongItem,
+  },
+  directives: {
+    'icon-secondary': IconSecondary
   },
   async created() {
     this.getSongs()
