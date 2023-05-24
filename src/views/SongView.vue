@@ -18,7 +18,7 @@ main
     div(class="bg-white rounded border border-gray-200 relative flex flex-col")
       div(class="px-6 pt-6 pb-5 font-bold border-b border-gray-200")
         // comment count
-        span.card-title Comments: ({{ song.comment_count }})
+        span.card-title {{ $tc("song.comment_count", song.comment_count, {count: song.comment_count}) }}
         i(class="fa fa-comments float-right text-green-400 text-2xl")
       .p-6
       div(class="text-white text-center font-bold p-4 mb-4" v-if="comment_show_alert" :class="comment_alert_variant") {{ comment_alert_message }}
