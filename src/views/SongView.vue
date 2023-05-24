@@ -13,6 +13,7 @@ main
         //Song Info
         .text-3xl.font-bold {{ song.modified_name }}
         div {{ song.genre }}
+        .song-price {{ $n(1, "currency", "ja") }}
   // Form
   section.container.mx-auto.mt-6#comments
     div(class="bg-white rounded border border-gray-200 relative flex flex-col")
