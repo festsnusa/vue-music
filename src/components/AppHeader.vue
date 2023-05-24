@@ -46,7 +46,7 @@ export default {
   computed: {
     ...mapStores(useModalStore, useUserStore),
     currentLocale() {
-      return this.$188n.locale === "fr" ? "French" : "English"
+      return this.$i18n.locale === "fr" ? "French" : "English"
     }
   },
   methods: {
@@ -55,7 +55,7 @@ export default {
       console.log(this.modalStore.isOpen)
     },
     changeLocale() {
-      this.$188n.locale = this.$188n.locale === 'fr' ? 'en' : 'fr'
+      this.$i18n.locale = this.$i18n.locale === 'fr' ? 'en' : 'fr'
     },
   }
 }
