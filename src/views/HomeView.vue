@@ -4,7 +4,7 @@ main
     .absolute.inset-0.w-full.h-full.bg-contain.introduction-bg(style="background-image: url(assets/img/header.png)")
     .container.mx-auto
       .text-white.main-header-content
-        h1.font-bold.text-5xl.mb-5 Listen to Great Music!
+        h1.font-bold.text-5xl.mb-5 {{ $t("home.listen") }}
         p(class="w-full md:w-8/12 mx-auto") Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
           | et dolor mollis, congue augue non, venenatis elit. Nunc justo eros,
           | suscipit ac aliquet imperdiet, venenatis et sapien. Duis sed magna
