@@ -50,7 +50,9 @@ VeeForm(:validation-schema="schema" @submit="register" :initial-values="userData
   // TOS
   .mb-3.pl-6
     VeeField(type="checkbox" name="tos" value="1" class="w-4 h-4 float-left -ml-6 mt-1 rounded")
-    label.inline-block Accept terms of service
+    //- label.inline-block Accept terms of service
+    i18n-t.inline-block(keypath="register.accept" tag="label")
+      a(href="#") {{ $t("register.tos") }} 
     ErrorMessage.text-red-600.block(name="tos")
   button(type="submit" class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition hover:bg-purple-700"
     :disabled="reg_in_submission") Submit
