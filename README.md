@@ -1,7 +1,7 @@
 # vue-music
 
 Just a little music application with Authorisation, Data Storing and a Player using Firebase 8.
-Live demo is available [https://elaborate-rugelach-24ecfc.netlify.app](here)
+Live demo is available [here](https://elaborate-rugelach-24ecfc.netlify.app)
 
 ## Recommended IDE Setup
 
