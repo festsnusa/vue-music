@@ -11,7 +11,7 @@ li(class="flex justify-between items-center p-3 pl-6 cursor-pointer transition d
         i.fa.fa-comments.text-gray-600 {{ song.comment_count }}
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "SongItem",
   props: ['song'],

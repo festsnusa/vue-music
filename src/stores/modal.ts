@@ -5,7 +5,7 @@ export default defineStore('modal', {
     isOpen: false,
   }),
   getters: {
-    hiddenClass(state) {
+    hiddenClass(state): string {
       return !state.isOpen ? "hidden" : ""
     }
   }
