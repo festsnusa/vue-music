@@ -1,6 +1,7 @@
 # vue-music
 
-This template should help get you started developing with Vue 3 in Vite.
+Just a little music application with Authorisation, Data Storing and a Player using Firebase 8.
+Live demo is available [here](https://elaborate-rugelach-24ecfc.netlify.app)
 
 ## Recommended IDE Setup
 
